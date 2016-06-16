@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'about' => 'pages#about'
+
+  get 'contact' => 'pages#contact'
+
   devise_for :users, controller: {
       session: 'users/session'
   }
@@ -7,7 +11,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  root 'pages#home'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
