@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   before_filter :authenticate_admin!
 
   def dashboard
-
+    @users = User.all
   end
 
   private
