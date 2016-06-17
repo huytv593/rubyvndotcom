@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  posts: 
+  posts_id: 
 
 two:
   name: MyString
-  posts: 
+  posts_id: 
