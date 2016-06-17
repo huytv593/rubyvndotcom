@@ -1,0 +1,10 @@
+<%- model_class = Post -%>
+
+<% provide(:name, @post.name) %>
+<% provide(:user_id, @post.user_id) %>
+<% provide(:featured_image, @post.featured_image) %>
+
+<dl class="dl-horizontal">
+  <%= @post.name %>
+  <%= @post.content %>
+</dl>

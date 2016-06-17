@@ -24,6 +24,13 @@
         <li>
           <%= link_to "Contact", contact_path %>
         </li>
+        <li>
+          <% if user_signed_in? %>
+              <%= link_to "Logout", destroy_user_session_path, method: :DELETE %>
+          <% else %>
+              <%= link_to "Log in", new_user_session_path %>
+          <% end %>
+        </li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
