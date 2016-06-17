@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617063345) do
+ActiveRecord::Schema.define(version: 20160617132541) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "posts_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "categories", ["posts_id"], name: "index_categories_on_posts_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "name"
