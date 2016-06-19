@@ -29,6 +29,7 @@ gem 'rolify'
 
 # bootstrap
 gem "twitter-bootstrap-rails"
+gem 'ckeditor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
