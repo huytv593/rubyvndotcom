@@ -3,6 +3,7 @@ class AdminController < ApplicationController
 
   def dashboard
     @users = User.all
+    @posts = Post.all
   end
 
   private

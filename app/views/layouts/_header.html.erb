@@ -1,0 +1,17 @@
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('<%= @post_image.nil? ? asset_path('home-bg.jpg'):asset_path(@post_image) %>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>
+            <%= @post_name.nil? ? "Ruby Blog":@post_name %>
+          </h1>
+          <hr class="small">
+          <span class="subheading"><%= @post_user.nil? ? "A Ruby Blog on Vietnam":@post_user %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
