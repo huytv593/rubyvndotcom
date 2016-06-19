@@ -1,6 +1,29 @@
-<dl class="dl-horizontal">
-  <dd><% @category.name %></dd>
-  <dd><%= @category.description %></dd>
-  <dd><% @category.featured_image %></dd>
-</dl>
+<% provide(:name, @category.name) %>
+<% provide(:description, @category.description) %>
+<% provide(:featured_image, @category.featured_image) %>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <% @posts.each do |p| %>
+        <div class="post-preview">
+          <%= link_to post_path(p) do %>
+              <h2 class="post-title">
+                <%= p.name %>
+              </h2>
+              <h3 class="post-subtitle">
+                <%= p.content.truncate(100, omission: '...') %>
+              </h3>
+          <% end %>
+          <p class="post-meta">Posted by <%= User.find(p.user_id).email %> on <%= p.created_at.strftime("%d/%m/%Y") %></p>
+        </div>
+        <hr>
+    <% end %>
+    <!-- Pager -->
+    <!--<ul class="pager">-->
+      <!--<li class="next">-->
+        <!--<a href="#">Older Posts &rarr;</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  </div>
+</div>
 
