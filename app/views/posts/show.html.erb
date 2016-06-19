@@ -5,6 +5,30 @@
 <% provide(:featured_image, @post.featured_image) %>
 
 <dl class="dl-horizontal">
-  <%= @post.name %>
   <%= @post.content %>
+  <br>
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <p><i class="fa fa-comments"></i>
+        Comments
+      </p>
+    </div>
+
+
+    <div class="col-md-12 post-comments-list">
+      <% @comments.each do |comment| %>
+          <%= render partial: 'comments/comment', locals: {comment: comment} %>
+      <% end %>
+    </div>
+    <div class="col-md-12">
+      <%= form_for @new_comment, remote: true, html: {class: "comment-form"} do |f| %>
+          <%= f.hidden_field :post_id, value: @post.id %>
+          <%= f.text_area :content, class: "form-control", rows: 5, disabled: !user_signed_in? %>
+          <br>
+          <%= f.submit "Send comment", class: "btn btn-success pull-right btn-outline #{disabled unless user_signed_in?}" %>
+      <% end %>
+    </div>
+  </div>
 </dl>

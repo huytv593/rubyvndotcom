@@ -4,6 +4,7 @@ class AdminController < ApplicationController
   def dashboard
     @users = User.all
     @posts = Post.all
+    @comments = Comment.all
   end
 
   private
