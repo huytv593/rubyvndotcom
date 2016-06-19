@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :posts
+  has_many :comments
 
   rolify
   # Include default devise modules. Others available are:
