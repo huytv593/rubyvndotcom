@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require ckeditor/init
 //= require turbolinks
 //= require metisMenu.min
 //= require sb-admin-2

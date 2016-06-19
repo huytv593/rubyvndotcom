@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require ckeditor/init
 //= require turbolinks
 //= require clean-blog.min
 //= require_tree .
