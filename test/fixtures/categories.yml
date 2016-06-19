@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  posts_id: 
+  description: MyString
+  featured_image: MyString
 
 two:
   name: MyString
-  posts_id: 
+  description: MyString
+  featured_image: MyString
