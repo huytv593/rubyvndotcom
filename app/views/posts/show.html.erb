@@ -1,7 +1,5 @@
-<%- model_class = Post -%>
-
 <% provide(:name, @post.name) %>
-<% provide(:user_id, @post.user_id) %>
+<% provide(:description, User.find(@post.user_id).email) %>
 <% provide(:featured_image, @post.featured_image) %>
 
 <dl class="dl-horizontal">
@@ -15,7 +13,6 @@
         Comments
       </p>
     </div>
-
 
     <div class="col-md-12 post-comments-list">
       <% @comments.each do |comment| %>
