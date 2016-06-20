@@ -9,7 +9,7 @@
     <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
     <dd><%= @post.name %></dd>
     <dt><strong><%= model_class.human_attribute_name(:content) %>:</strong></dt>
-    <dd><%= @post.content %></dd>
+    <dd><%= @post.content.html_safe %></dd>
     <dt><strong><%= model_class.human_attribute_name(:featured_image) %>:</strong></dt>
     <dd><%= @post.featured_image %></dd>
     <dt><strong><%= model_class.human_attribute_name(:category) %>:</strong></dt>
