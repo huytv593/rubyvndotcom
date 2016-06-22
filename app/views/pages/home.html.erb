@@ -15,15 +15,15 @@
           <%= _item.content.truncate(100, omission: '...') %>
         </h3>
       <% end %>
-      <p class="post-meta">Posted by <%= User.find(_item.user_id).email %> on <%= _item.created_at.strftime("%d/%m/%Y") %></p>
+      <p class="post-meta">Đăng bởi <%= User.find(_item.user_id).email %> vào <%= _item.created_at.strftime("%d/%m/%Y") %></p>
     </div>
     <hr>
     <% end %>
-    <!-- Pager -->
-    <!--<ul class="pager">-->
-      <!--<li class="next">-->
-        <!--<a href="#">Older Posts &rarr;</a>-->
-      <!--</li>-->
-    <!--</ul>-->
+     Pager
+    <ul class="pager">
+      <li class="next">
+        <a href="#">Bài đăng cũ hơn &rarr;</a>
+      </li>
+    </ul>
   </div>
 </div>
