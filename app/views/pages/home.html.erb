@@ -13,6 +13,7 @@
         </h2>
         <h3 class="post-subtitle">
           <small><%= _item.content.truncate(100, omission: '...').html_safe %></small>
+          <div class='clearfix'></div>
         </h3>
       <% end %>
       <p class="post-meta">Đăng bởi <%= User.find(_item.user_id).email %> vào <%= _item.created_at.strftime("%d/%m/%Y") %></p>
