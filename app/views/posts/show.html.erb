@@ -3,7 +3,7 @@
 <% provide(:featured_image, @post.featured_image) %>
 
 <dl class="dl-horizontal">
-  <%= @post.content %>
+  <%= @post.content.html_safe %>
   <br>
   <hr>
   <br>
