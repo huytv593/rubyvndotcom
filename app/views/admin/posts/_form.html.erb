@@ -33,7 +33,7 @@
     <div class="form-group">
       <%= f.label :featured_image, :class => 'control-label col-lg-2' %>
       <div class="col-lg-10">
-        <%= f.text_field :featured_image, :class => 'form-control', :required => "required" %>
+        <%= f.file_field :featured_image %>
       </div>
       <%= f.error_span(:featured_image) %>
     </div>
