@@ -32,7 +32,7 @@
           <%= f.hidden_field :post_id, value: @post.id %>
           <%= f.text_area :content, class: "form-control", rows: 5, disabled: !user_signed_in?, :required => "required" %>
           <br>
-          <%= f.submit "Send comment", class: "btn btn-success pull-right btn-outline #{'disabled' unless user_signed_in?}" %>
+          <%= f.submit "Send comment", class: "btn btn-success pull-right  #{ !user_signed_in? ? 'disabled':'btn-outline' }" %>
       <% end %>
     </div>
   </div>
