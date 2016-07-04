@@ -36,5 +36,11 @@
         </tr>
     <% end %>
     </tbody>
+    <tfoot>
+      <!--Pager-->
+      <ul class="pager">
+        <%= paginate @posts %>
+      </ul>
+    </tfoot>
   </table>
 </div>
